@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shattered Riffs</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <section class="container header_content">
+        <h1 class="logo">Shattered Riffs</h1>
+        <button class="open-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <button class="close-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Nav for desktop / hamburger for mobile -->
+        <nav class="nav">
+          <ul class="nav_list">
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <article class="hero_overlay">
+          <h2>ROCK THE NIGHT-UPCOMING TOUR</h2>
+          <a href="#events" class="btn">View All Events</a>
+        </article>
+      </section>
+
+      <!-- EVENTS -->
+      <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+
+        <!-- Extra points: table -->
+        <table class="events__table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>City</th>
+              <th>Venue</th>
+              <th>Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="new">
+              <td>15 May</td>
+              <td>Madrid</td>
+              <td>Sala Sol</td>
+              <td><button class="button-table">Buy</button></td>
+            </tr>
+            <tr class="old">
+              <td>18 May</td>
+              <td>Barcelona</td>
+              <td>Razzmatazz</td>
+              <td><button class="button-table">Buy</button></td>
+            </tr>
+            <tr class="new">
+              <td>22 May</td>
+              <td>Valencia</td>
+              <td>Moon Club</td>
+              <td><button class="button-table">Buy</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="about">
+        <figure>
+          <img src="./assets/image/img-2.jpg" alt="Band photo" />
+        </figure>
+        <article>
+          <h2>About the Band</h2>
+          <p>
+            Shattered Riffs is a high-energy rock band known for powerful live
+            performances and raw sound.
+          </p>
+          <h3>Our Influences</h3>
+          <ul>
+            <li>Classic Rock</li>
+            <li>Hard Rock</li>
+            <li>Alternative</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- MEDIA -->
+      <section id="media" class="media">
+        <h2>Multimedia</h2>
+
+        <figure class="media__grid">
+          <img src="./assets/image/img-2.jpg" alt="" />
+          <img src="./assets/image/img-3.jpg" alt="" />
+          <img src="./assets/image/img-4.jpg" alt="" />
+          <img src="./assets/image/img-5.jpg" alt="" />
+          <img src="./assets/image/img-6.jpg" alt="" />
+          <img src="./assets/image/img-7.jpg" alt="" />
+        </figure>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+      <p>© <span id="year">2026</span> Shattered Riffs</p>
+
+      <!-- Another possible list -->
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Spotify</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+.header_content {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+
+  align-items: center;
+}
+.nav_list {
+  list-style: none;
+}
+.nav_list li {
+  display: inline-block;
+}
+.nav_list li a {
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.nav_list li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  background-color: red;
+  transition: all 0.4s ease;
+}
+
+.nav_list li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.open-menu {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 11.5px 0;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.close-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 11.5px 0;
+}
+
+.hero {
+  background-image: url("../image/img-9.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.hero_overlay {
+  text-align: center;
+}
+.hero_overlay h2 {
+  font-size: 3rem;
+}
+.btn {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.events {
+  background-color: #555555;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 6rem 0;
+}
+.events h2 {
+  font-size: 2rem;
+}
+.events__table {
+  text-align: center;
+  border: none;
+  margin-top: 1rem;
+  width: 80%;
+}
+.events__table thead tr {
+  background-color: #690b0b;
+}
+
+.old {
+  background-color: #240202;
+}
+.new {
+  background-color: #222222;
+}
+.button-table {
+  border: none;
+  background-color: #ce0000a9;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.button-table:hover {
+  background-color: #690b0b;
+}
+
+.about {
+  padding: 6rem 1rem;
+  background-color: #222222;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about figure img {
+  width: 100%;
+}
+
+.about article h2 {
+  font-size: 2.5rem;
+}
+.about article h3 {
+  color: #c91818;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.about article ul {
+  margin-left: 1rem;
+}
+.media {
+  padding: 5rem 0;
+}
+.media h2 {
+  font-size: 2rem;
+}
+
+.media__grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.media__grid img {
+  object-fit: cover;
+  border: 1px solid #c91818;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  border-top: 1px solid gray;
+  padding: 2rem;
+}
+footer p {
+  text-align: center;
+}
+
+.social {
+  list-style: none;
+}
+
+.social li a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    padding: 0 20px;
+  }
+  .active {
+    height: 100vh;
+  }
+
+  .open-menu.actives {
+    display: none;
+  }
+  .close-menu.activesed {
+    display: block;
+  }
+  .nav::after {
+    content: "";
+    z-index: -1;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ce;
+    backdrop-filter: blur(5px);
+  }
+  .open-menu {
+    display: block;
+  }
+
+  .nav_list li {
+    display: block;
+    margin: 2rem;
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .media__grid {
+    grid-template-rows: repeat(6, 200px);
+    grid-template-columns: 1fr;
+  }
+}
