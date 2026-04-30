@@ -11,6 +11,7 @@ body {
   line-height: 1.5;
 }
 header {
+  background-color: black;
   position: sticky;
   top: 0;
 }
@@ -105,8 +106,11 @@ header {
   padding: 10px;
 }
 
+.content-events {
+  background-color: #414141;
+}
+
 .events {
-  background-color: #555555;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -117,10 +121,11 @@ header {
   font-size: 2rem;
 }
 .events__table {
+  border-collapse: collapse;
   text-align: center;
-  border: none;
+  border: 1px solid white;
   margin-top: 1rem;
-  width: 80%;
+  width: 100%;
 }
 .events__table thead tr {
   background-color: #690b0b;
@@ -130,7 +135,7 @@ header {
   background-color: #240202;
 }
 .new {
-  background-color: #222222;
+  background-color: #353535;
 }
 .button-table {
   border: none;
@@ -144,9 +149,13 @@ header {
   background-color: #690b0b;
 }
 
-.about {
-  padding: 6rem 1rem;
+.content-about {
   background-color: #222222;
+  width: 100%;
+}
+
+.about {
+  padding: 6rem 0;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
@@ -167,6 +176,7 @@ header {
 .about article ul {
   margin-left: 1rem;
 }
+
 .media {
   padding: 5rem 0;
 }
@@ -210,17 +220,16 @@ footer p {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 100%;
+    width: 0;
     top: 100%;
-    left: 0;
+    right: 0;
     z-index: 10;
-    height: 0;
+    height: 100vh;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-    padding: 0 20px;
   }
   .active {
-    height: 100vh;
+    width: 100%;
   }
 
   .open-menu.actives {
@@ -232,7 +241,7 @@ footer p {
   .nav::after {
     content: "";
     z-index: -1;
-    left: 0;
+    right: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -248,9 +257,10 @@ footer p {
     margin: 2rem;
   }
 
-  .nav ul li a {
+  .nav_list li a {
     font-size: 20px;
     color: #ffffff;
+    margin: 0;
   }
 
   .about {
