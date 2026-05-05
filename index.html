@@ -10,6 +10,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -72,7 +73,7 @@
 
       <!-- EVENTS -->
       <section id="events" class="content-events">
-        <article class="events container">
+        <article class="events container" data-aos="zoom-in">
           <h2>Upcoming Events</h2>
 
           <!-- Extra points: table -->
@@ -112,10 +113,10 @@
       <!-- ABOUT -->
       <section id="about" class="content-about">
         <div class="about container">
-          <figure>
+          <figure data-aos="fade-up">
             <img src="./assets/image/img-2.jpg" alt="Band photo" />
           </figure>
-          <article>
+          <article data-aos="fade-left">
             <h2>About the Band</h2>
             <p>
               Shattered Riffs is a high-energy rock band known for powerful live
@@ -160,6 +161,7 @@
       </section>
     </footer>
 
+    <script src="./assets/vendor/aos/aos.js" defer></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
